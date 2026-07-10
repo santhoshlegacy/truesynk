@@ -447,3 +447,46 @@ footer { padding: 56px 32px 40px; max-width: 1180px; margin: 0 auto; }
 /* ===== ADDITIONAL UTILITIES (replacing remaining inline styles) ===== */
 .gold-link { color: var(--gold-deep); text-decoration: underline; }
 .mt-xl { margin-top: 60px; }
+
+/* ===== CLIENT LOGO & LINK STYLES ===== */
+.client-logo {
+  height: 48px;
+  width: auto;
+  max-width: 150px;
+  margin-bottom: 24px;
+  display: block;
+}
+
+.client-link {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  color: var(--ink);
+  text-decoration: none;
+  border-bottom: 1px solid var(--hairline);
+  padding-bottom: 2px;
+  transition: color 0.3s var(--ease-premium), border-color 0.3s var(--ease-premium);
+  display: inline-block;
+  margin-top: 12px;
+}
+
+.client-link:hover {
+  color: var(--gold-deep);
+  border-color: var(--gold-deep);
+}
+/* Client Avatar Logo */
+.avatar-img {
+  width: 48px; /* Matches standard avatar sizing */
+  height: 48px;
+  border-radius: 50%; /* Makes it a perfect circle */
+  object-fit: cover; /* Prevents the logo from stretching or squishing */
+  border: 1px solid var(--hairline);
+  flex-shrink: 0;
+}
+
+/* Ensure the .who container aligns the image and text properly */
+.who {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}

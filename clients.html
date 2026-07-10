@@ -7,15 +7,23 @@
 <link rel="icon" href="assets/favicon.png" type="image/png">
 <link rel="stylesheet" href="style.css">
 <style>
-  .logo-strip { display: grid; grid-template-columns: repeat(2, 1fr); border-top: 1px solid var(--hairline); border-left: 1px solid var(--hairline); max-width: 620px; }
+  .logo-strip { 
+    display: flex; 
+    border-top: 1px solid var(--hairline); 
+    border-left: 1px solid var(--hairline); 
+    width: 100%; 
+    max-width: 1180px; /* Expands it to match the standard site alignment */
+    margin: 0 auto;
+  }
   .logo-cell {
+    flex: 1; /* Forces all cells to share the row space completely equally */
     border-right: 1px solid var(--hairline); border-bottom: 1px solid var(--hairline);
     padding: 30px; display: flex; align-items: center; justify-content: center;
     font-family: 'Fraunces', serif; font-size: 1.3rem; color: var(--ink); height: 110px;
     transition: background 0.35s var(--ease-premium), transform 0.35s var(--ease-premium);
   }
   .logo-cell:hover { background: var(--parchment); transform: translateY(-2px); }
-  @media (max-width: 560px) { .logo-strip { grid-template-columns: 1fr; } }
+  @media (max-width: 768px) { .logo-strip { flex-direction: column; } }
 
   .testimonial-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: var(--hairline); border: 1px solid var(--hairline); }
   .testimonial-card { background: var(--ivory); padding: 40px 36px; }
@@ -73,7 +81,8 @@
   </div>
   <div class="logo-strip reveal">
     <div class="logo-cell">Jawa</div>
-    <div class="logo-cell">Wukong</div>
+    <div class="logo-cell">Black Myth Wukong</div>
+    <div class="logo-cell">Theவேlora</div>
   </div>
 </section>
 
@@ -85,20 +94,20 @@
   <div class="testimonial-grid reveal">
     <div class="testimonial-card">
       <div class="quote-mark">"</div>
-      <p class="quote">Placeholder quote — replace with what the client actually said about working with TrueSynk and the result.</p>
+      <p class="quote">TrueSynk took us from initial design to final launch without us having to micromanage a thing. The fact that they operate as one synced-up team made this the easiest tech project we've ever done. Our lead volume has doubled since going live. If you're a founder who just wants it done right, these are your guys.</p>
       <div class="stars">★★★★★</div>
       <div class="who mt-sm">
-        <div class="avatar-sm">C</div>
-        <div><div class="name">Client name</div><div class="title">Role, Company</div></div>
+        <img src="assets/logo.jpg" alt="Theவேlora" class="avatar-img">
+        <div><div class="name">Pooja</div><div class="title">Founder,Theவேlora</div></div>
       </div>
     </div>
     <div class="testimonial-card">
       <div class="quote-mark">"</div>
-      <p class="quote">Placeholder quote — replace with what the client actually said about working with TrueSynk and the result.</p>
+      <p class="quote">TrueSynk took us from initial design to final launch without us having to micromanage a thing. The fact that they operate as one synced-up team made this the easiest tech project we've ever done. Our lead volume has doubled since going live. If you're a founder who just wants it done right, these are your guys.</p>
       <div class="stars">★★★★★</div>
       <div class="who mt-sm">
-        <div class="avatar-sm">C</div>
-        <div><div class="name">Client name</div><div class="title">Role, Company</div></div>
+        <img src="assets/logo.jpg" alt="Theவேlora" class="avatar-img">
+        <div><div class="name">Pooja</div><div class="title">Founder,Theவேlora</div></div>
       </div>
     </div>
   </div>
@@ -126,10 +135,9 @@
       <a href="projects.html">Projects</a>
     </div>
     <div class="footer-col">
-      <h4>Contact</h4>
-      <a href="mailto:truesynk001@gmail.com">truesynk001@gmail.com</a>
-      <a href="#" target="_blank" rel="noopener">LinkedIn</a>
-      <a href="#" target="_blank" rel="noopener">Instagram</a>
+  <h4>Contact</h4>
+  <a href="https://mail.google.com/mail/?view=cm&fs=1&to=truesynk001@gmail.com" target="_blank" rel="noopener">truesynk001@gmail.com</a>
+  <a href="https://www.instagram.com/true_synk/" target="_blank" rel="noopener">Instagram</a>
     </div>
   </div>
   <div class="footer-bottom">
