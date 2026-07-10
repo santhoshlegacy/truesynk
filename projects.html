@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projects — TrueSynk</title>
+<link rel="icon" href="assets/favicon.png" type="image/png">
+<link rel="stylesheet" href="style.css">
+<style>
+  .case {
+    border-top: 1px solid var(--hairline); padding: 56px 0;
+    display: grid; grid-template-columns: 0.9fr 1.6fr; gap: 56px;
+  }
+  .case:last-child { border-bottom: 1px solid var(--hairline); }
+  .case-tag { font-family: 'IBM Plex Mono', monospace; font-size: 0.72rem; letter-spacing: 0.06em; color: var(--gold-deep); text-transform: uppercase; margin-bottom: 14px; display: block; }
+  .case h3 { font-size: 1.8rem; margin-bottom: 8px; }
+  .case .client { color: var(--grey-text); font-size: 0.92rem; margin-bottom: 28px; }
+  .case-flow { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+  .case-flow .step-label { font-family: 'IBM Plex Mono', monospace; font-size: 0.68rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--gold-deep); margin-bottom: 8px; display: block; }
+  .case-flow p { font-size: 0.9rem; color: var(--ink); }
+  .case-results { margin-top: 30px; display: flex; gap: 40px; flex-wrap: wrap; }
+  .result .num { font-family: 'Fraunces', serif; font-size: 1.6rem; color: var(--gold-deep); }
+  .result .label { font-family: 'IBM Plex Mono', monospace; font-size: 0.68rem; color: var(--grey-text); margin-top: 2px; }
+  @media (max-width: 900px) { .case { grid-template-columns: 1fr; gap: 22px; } .case-flow { grid-template-columns: 1fr; gap: 18px; } }
+
+  .cta { background: var(--parchment); text-align: center; padding: 120px 32px; }
+  .cta-inner { max-width: 620px; margin: 0 auto; }
+  .cta h2 { font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 20px; }
+  .cta p { color: var(--grey-text); margin-bottom: 36px; }
+  .cta-sync { max-width: 200px; margin: 0 auto 32px; }
+</style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <a href="home.html" class="logo"><img src="assets/logo-badge.png" alt="TrueSynk" class="logo-badge">TrueSynk</a>
+    <button class="mobile-toggle" aria-expanded="false">MENU</button>
+    <div class="nav-links">
+      <a href="home.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="projects.html" class="active">Projects</a>
+      <a href="clients.html">Clients</a>
+      <a href="team.html">Team</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <a href="contact.html" class="btn desktop-cta">Start a project</a>
+  </nav>
+</header>
+
+<section class="hero-v2">
+  <div class="hero-accent-bar"></div>
+  <div class="stagger">
+    <span class="eyebrow-badge"><span class="eyebrow">Projects</span></span>
+    <h1>The work, <span class="highlight">in detail.</span></h1>
+    <p class="page-hero-sub">Not a gallery of screenshots — the problem each client came to us with, what we built, and what changed after launch.</p>
+  </div>
+</section>
+
+<section class="section-flush">
+  <div class="case reveal">
+    <div><span class="case-tag">Web Development</span><h3>Jawa</h3><div class="client">Client — Jawa</div></div>
+    <div>
+      <div class="case-flow">
+        <div><span class="step-label">Problem</span><p>Jawa needed a website that could represent the brand properly online.</p></div>
+        <div><span class="step-label">Approach</span><p>TrueSynk designed and built a custom site end to end, from structure to launch.</p></div>
+        <div><span class="step-label">Result</span><p>A live, working website ready to represent Jawa online.</p></div>
+      </div>
+      <div class="case-results">
+        <div class="result"><div class="num">Live</div><div class="label">STATUS</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="case reveal">
+    <div><span class="case-tag">Web Development</span><h3>Wukong</h3><div class="client">Client — Wukong</div></div>
+    <div>
+      <div class="case-flow">
+        <div><span class="step-label">Problem</span><p>Wukong needed a website that could represent the brand properly online.</p></div>
+        <div><span class="step-label">Approach</span><p>TrueSynk designed and built a custom site end to end, from structure to launch.</p></div>
+        <div><span class="step-label">Result</span><p>A live, working website ready to represent Wukong online.</p></div>
+      </div>
+      <div class="case-results">
+        <div class="result"><div class="num">Live</div><div class="label">STATUS</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta" id="contact">
+  <div class="cta-inner">
+    <div class="sync-line cta-sync"><span class="node"></span><div class="track"></div><span class="node"></span></div>
+    <h2>Want results like these?</h2>
+    <p>Let's talk about what you're building.</p>
+    <a href="contact.html" class="btn">Start a project</a>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <a href="home.html" class="logo"><img src="assets/logo-badge.png" alt="TrueSynk" class="logo-badge">TrueSynk</a>
+      <p>A freelance studio for founders who want one accountable team, not a patchwork of contractors.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Studio</h4>
+      <a href="services.html">Services</a>
+      <a href="team.html">Team</a>
+      <a href="projects.html">Projects</a>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <a href="mailto:truesynk001@gmail.com">truesynk001@gmail.com</a>
+      <a href="#" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="#" target="_blank" rel="noopener">Instagram</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 TrueSynk. All rights reserved.</span>
+    <span>Built in sync.</span>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

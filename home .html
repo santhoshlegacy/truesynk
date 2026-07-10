@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TrueSynk — We Build Websites That Drive Growth</title>
+<link rel="icon" href="assets/favicon.png" type="image/png">
+<link rel="stylesheet" href="style.css">
+<style>
+  .services-grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--hairline); border-left: 1px solid var(--hairline); }
+  .service-card { border-right: 1px solid var(--hairline); border-bottom: 1px solid var(--hairline); padding: 40px 30px; }
+  .service-card .icon-box { width: 52px; height: 52px; border-radius: 12px; background: var(--parchment); border: 1px solid var(--hairline); display: flex; align-items: center; justify-content: center; margin-bottom: 22px; transition: transform 0.4s var(--ease-premium), background 0.4s; }
+  .service-card .icon-box svg { width: 24px; height: 24px; stroke: var(--gold-deep); }
+  .service-card:hover .icon-box { transform: rotate(-8deg) scale(1.08); background: var(--gold); }
+  .service-card:hover .icon-box svg { stroke: var(--ivory); }
+  .service-card h3 { font-size: 1.15rem; margin-bottom: 10px; font-weight: 600; font-family: 'Inter', sans-serif; }
+  .service-card p { font-size: 0.92rem; color: var(--grey-text); }
+  @media (max-width: 800px) { .services-grid-3 { grid-template-columns: 1fr; } }
+
+  .work-card { background: var(--ivory); padding: 36px 30px; border: 1px solid var(--hairline); border-radius: 10px; }
+  .work-card .tag { font-family: 'IBM Plex Mono', monospace; font-size: 0.68rem; color: var(--gold-deep); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 14px; display: block; }
+  .work-card h3 { font-size: 1.3rem; margin-bottom: 8px; }
+  .work-card p { font-size: 0.9rem; color: var(--grey-text); margin-bottom: 18px; }
+  .work-card .see { font-family: 'IBM Plex Mono', monospace; font-size: 0.76rem; color: var(--gold-deep); }
+
+  .why-dark { position: relative; background: var(--obsidian); color: var(--ivory); padding: 110px 32px; overflow: hidden; }
+  .why-inner { max-width: 1180px; margin: 0 auto; }
+  .why-dark .eyebrow { color: var(--gold-light); }
+  .why-dark h2 { color: var(--ivory); }
+  .why-grid { margin-top: 56px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 44px; }
+  .why-item .num { font-family: 'Fraunces', serif; font-style: italic; color: var(--gold-light); font-size: 1.3rem; margin-bottom: 14px; display: block; }
+  .why-item h3 { color: var(--ivory); font-size: 1.1rem; margin-bottom: 8px; font-weight: 500; }
+  .why-item p { color: var(--grey-text-light); font-size: 0.9rem; }
+  @media (max-width: 800px) { .why-grid { grid-template-columns: 1fr; gap: 36px; } }
+
+  .cta { background: var(--parchment); text-align: center; padding: 120px 32px; }
+  .cta-inner { max-width: 620px; margin: 0 auto; }
+  .cta h2 { font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 20px; }
+  .cta p { color: var(--grey-text); margin-bottom: 36px; }
+  .cta-sync { max-width: 200px; margin: 0 auto 32px; }
+
+  .brand-moment { position: relative; background: var(--obsidian); padding: 90px 32px; text-align: center; overflow: hidden; }
+  .brand-moment-logo { max-width: 280px; margin: 0 auto; border-radius: 12px; box-shadow: 0 24px 60px -20px rgba(176, 129, 63, 0.25); }
+  .brand-moment-tag { margin-top: 28px; font-family: 'IBM Plex Mono', monospace; font-size: 0.8rem; letter-spacing: 0.08em; color: var(--gold-light); text-transform: uppercase; }
+</style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <a href="home.html" class="logo"><img src="assets/logo-badge.png" alt="TrueSynk" class="logo-badge">TrueSynk</a>
+    <button class="mobile-toggle" aria-expanded="false">MENU</button>
+    <div class="nav-links">
+      <a href="home.html" class="active">Home</a>
+      <a href="services.html">Services</a>
+      <a href="projects.html">Projects</a>
+      <a href="clients.html">Clients</a>
+      <a href="team.html">Team</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <a href="contact.html" class="btn desktop-cta">Start a project</a>
+  </nav>
+</header>
+
+<section class="hero-v2">
+  <div class="hero-accent-bar"></div>
+  <div class="stagger">
+    <span class="eyebrow-badge"><span class="eyebrow">Build. Launch. Grow.</span></span>
+    <h1>We build <span class="highlight">websites that drive growth.</span></h1>
+    <p class="page-hero-sub">Strategic. Modern. Results-driven. We design and develop high-performing websites, apps, and automations that elevate your brand, engage your audience, and grow your business online.</p>
+    <div class="hero-cta">
+      <a href="contact.html" class="btn">Start a project</a>
+      <a href="projects.html" class="btn btn-outline">See our work</a>
+    </div>
+  </div>
+
+  <div class="feature-icons reveal">
+    <div class="feature-icon-item">
+      <div class="icon-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h7l-1 8 10-12h-7l1-8z"/></svg></div>
+      <h4>Fast Turnaround</h4>
+      <p>On-time delivery you can rely on.</p>
+    </div>
+    <div class="feature-icon-item">
+      <div class="icon-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="12" rx="1.5"/><path d="M8 20h8M12 16v4"/></svg></div>
+      <h4>Modern & Responsive</h4>
+      <p>Looks perfect on every device and screen.</p>
+    </div>
+    <div class="feature-icon-item">
+      <div class="icon-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3z"/><path d="m9 12 2 2 4-4"/></svg></div>
+      <h4>Secure & Reliable</h4>
+      <p>Built with best practices and performance in mind.</p>
+    </div>
+    <div class="feature-icon-item">
+      <div class="icon-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 13a9 9 0 0 1 18 0"/><path d="M3 13v3a2 2 0 0 0 2 2h1v-6H4a1 1 0 0 0-1 1z"/><path d="M21 13v3a2 2 0 0 1-2 2h-1v-6h2a1 1 0 0 1 1 1z"/><path d="M17 19v.5a2 2 0 0 1-2 2h-2"/></svg></div>
+      <h4>Dedicated Support</h4>
+      <p>We're with you even after launch.</p>
+    </div>
+  </div>
+</section>
+
+<section class="brand-moment">
+  <div class="gold-thread left"></div>
+  <div class="gold-thread right"></div>
+  <img src="assets/logo-full.jpg" alt="TrueSynk" class="brand-moment-logo">
+  <p class="brand-moment-tag">At TrueSynk, we build digital experiences that synk with your goals.</p>
+</section>
+
+<section>
+  <div class="section-head reveal">
+    <div class="eyebrow-line"><span class="eyebrow">What we do</span></div>
+    <h2>Websites, apps, and the automation behind them.</h2>
+  </div>
+  <div class="services-grid-3 reveal">
+    <div class="service-card">
+      <div class="icon-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="m8 6-6 6 6 6M16 6l6 6-6 6"/></svg></div>
+      <h3>Web Development</h3>
+      <p>Fast, maintainable websites — from business sites to full-stack web applications.</p>
+    </div>
+    <div class="service-card">
+      <div class="icon-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2" width="12" height="20" rx="2"/><path d="M11 18h2"/></svg></div>
+      <h3>App Development</h3>
+      <p>Mobile and web apps built around how your users actually work.</p>
+    </div>
+    <div class="service-card">
+      <div class="icon-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 2v3M15 2v3M9 19v3M15 19v3M2 9h3M2 15h3M19 9h3M19 15h3"/></svg></div>
+      <h3>Automation</h3>
+      <p>Custom workflows and tools that remove repetitive work from your day.</p>
+    </div>
+  </div>
+  <div class="mt-lg"><a href="services.html" class="eyebrow link-underline">View all services →</a></div>
+</section>
+
+<section>
+  <div class="section-head reveal">
+    <div class="eyebrow-line"><span class="eyebrow">Selected work</span></div>
+    <h2>Recent projects.</h2>
+  </div>
+  <div class="grid-2up reveal">
+    <div class="work-card"><span class="tag">Web Development</span><h3>Jawa</h3><p>A custom website built and shipped end to end for the Jawa project.</p><a href="projects.html" class="see">View case study →</a></div>
+    <div class="work-card"><span class="tag">Web Development</span><h3>Wukong</h3><p>A custom website built and shipped end to end for the Wukong project.</p><a href="projects.html" class="see">View case study →</a></div>
+  </div>
+  <div class="mt-lg"><a href="projects.html" class="eyebrow link-underline">View all projects →</a></div>
+</section>
+
+<section class="why-dark">
+  <div class="why-inner">
+    <div class="section-head reveal">
+      <div class="eyebrow-line"><span class="eyebrow">Why TrueSynk</span></div>
+      <h2>One team, not four freelancers you manage yourself.</h2>
+    </div>
+    <div class="why-grid reveal">
+      <div class="why-item"><span class="num">I.</span><h3>Founder-led, every project</h3><p>You work directly with the person accountable for the outcome.</p></div>
+      <div class="why-item"><span class="num">II.</span><h3>Built to stay in sync</h3><p>Design, dev, and delivery run on one shared plan.</p></div>
+      <div class="why-item"><span class="num">III.</span><h3>Small enough to move fast</h3><p>Decisions get made in the same week they're raised.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta" id="contact">
+  <div class="cta-inner">
+    <div class="sync-line cta-sync"><span class="node"></span><div class="track"></div><span class="node"></span></div>
+    <h2>Let's get in sync.</h2>
+    <p>Tell us what you're building. We'll reply within one business day.</p>
+    <a href="contact.html" class="btn">Get in touch</a>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <a href="home.html" class="logo"><img src="assets/logo-badge.png" alt="TrueSynk" class="logo-badge">TrueSynk</a>
+      <p>A freelance studio for founders who want one accountable team, not a patchwork of contractors.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Studio</h4>
+      <a href="services.html">Services</a>
+      <a href="team.html">Team</a>
+      <a href="projects.html">Projects</a>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <a href="mailto:truesynk001@gmail.com">truesynk001@gmail.com</a>
+      <a href="#" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="#" target="_blank" rel="noopener">Instagram</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 TrueSynk. All rights reserved.</span>
+    <span>Built in sync.</span>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

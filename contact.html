@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — TrueSynk</title>
+<link rel="icon" href="assets/favicon.png" type="image/png">
+<link rel="stylesheet" href="style.css">
+<style>
+  .contact-wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; }
+  .contact-info h3 { font-size: 1.4rem; margin-bottom: 16px; }
+  .contact-info p { color: var(--grey-text); margin-bottom: 28px; max-width: 40ch; }
+  .contact-detail { margin-bottom: 18px; }
+  .contact-detail .label { font-family: 'IBM Plex Mono', monospace; font-size: 0.7rem; color: var(--gold-deep); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 4px; }
+  .contact-detail .value { font-size: 0.98rem; }
+
+  .contact-channels { margin-top: 36px; display: flex; flex-direction: column; gap: 14px; }
+  .channel { display: flex; align-items: center; gap: 12px; font-size: 0.92rem; }
+  .channel .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--gold); flex-shrink: 0; }
+  .channel a { text-decoration: underline; text-underline-offset: 2px; }
+
+  form { display: flex; flex-direction: column; gap: 18px; }
+  .field label { font-family: 'IBM Plex Mono', monospace; font-size: 0.7rem; letter-spacing: 0.05em; text-transform: uppercase; color: var(--grey-text); display: block; margin-bottom: 8px; }
+  .field input, .field select, .field textarea {
+    width: 100%; padding: 12px 14px; background: transparent; border: 1px solid var(--hairline);
+    border-radius: 2px; font-family: 'Inter', sans-serif; font-size: 0.95rem; color: var(--ink);
+  }
+  .field input:focus, .field select:focus, .field textarea:focus { outline: none; border-color: var(--gold); }
+  .field textarea { min-height: 120px; resize: vertical; }
+  .field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+  form .btn { align-self: flex-start; margin-top: 6px; cursor: pointer; border: none; }
+  .form-note { font-size: 0.78rem; color: var(--grey-text); margin-top: 4px; }
+  #form-success-note {
+    display: none; font-size: 0.85rem; color: var(--gold-deep); background: var(--parchment);
+    border: 1px solid var(--hairline); border-radius: 6px; padding: 12px 16px; margin-top: 4px;
+  }
+
+  @media (max-width: 800px) {
+    .contact-wrap { grid-template-columns: 1fr; gap: 44px; }
+    .field-row { grid-template-columns: 1fr; }
+  }
+
+  .faq-item { border-top: 1px solid var(--hairline); padding: 26px 0; }
+  .faq-item:last-child { border-bottom: 1px solid var(--hairline); }
+  .faq-item h4 { font-size: 1.02rem; margin-bottom: 8px; font-weight: 500; font-family: 'Fraunces', serif; }
+  .faq-item p { font-size: 0.9rem; color: var(--grey-text); max-width: 60ch; }
+
+  .map-strip {
+    margin-top: 60px; border: 1px solid var(--hairline); padding: 40px;
+    display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 20px;
+    background: var(--parchment);
+  }
+  .map-strip .label { font-family: 'IBM Plex Mono', monospace; font-size: 0.72rem; color: var(--gold-deep); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 6px; }
+  .map-strip h3 { font-size: 1.2rem; }
+</style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <a href="home.html" class="logo"><img src="assets/logo-badge.png" alt="TrueSynk" class="logo-badge">TrueSynk</a>
+    <button class="mobile-toggle" aria-expanded="false">MENU</button>
+    <div class="nav-links">
+      <a href="home.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="projects.html">Projects</a>
+      <a href="clients.html">Clients</a>
+      <a href="team.html">Team</a>
+      <a href="contact.html" class="active">Contact</a>
+    </div>
+    <a href="contact.html" class="btn desktop-cta">Start a project</a>
+  </nav>
+</header>
+
+<section class="hero-v2">
+  <div class="hero-accent-bar"></div>
+  <div class="stagger">
+    <span class="eyebrow-badge"><span class="eyebrow">Contact</span></span>
+    <h1>Let's get <span class="highlight">in sync.</span></h1>
+    <p class="page-hero-sub">Tell us what you're building. Submit the form and it opens straight into WhatsApp with your details filled in — or reach us directly below.</p>
+  </div>
+</section>
+
+<section class="section-flush">
+  <div class="contact-wrap reveal">
+    <div class="contact-info">
+      <h3>Reach out directly.</h3>
+      <p>Prefer email, a call, or WhatsApp? Use whichever's easiest.</p>
+
+      <div class="contact-detail"><div class="label">Email</div><div class="value">truesynk001@gmail.com</div></div>
+      <div class="contact-detail"><div class="label">Phone</div><div class="value">+91 73387 53966 · +91 80564 30749</div></div>
+      <div class="contact-detail"><div class="label">Based in</div><div class="value">Chennai, Tamil Nadu, India</div></div>
+      <div class="contact-detail"><div class="label">Response time</div><div class="value">Within 1 business day</div></div>
+
+      <div class="contact-channels">
+        <div class="channel"><span class="dot"></span> LinkedIn — <a href="#" target="_blank" rel="noopener">@truesynk</a></div>
+        <div class="channel"><span class="dot"></span> Instagram — <a href="#" target="_blank" rel="noopener">@truesynk</a></div>
+        <div class="channel"><span class="dot"></span> <a href="https://wa.me/917338753966" target="_blank" rel="noopener">Chat with us on WhatsApp →</a></div>
+      </div>
+
+      <a href="https://wa.me/917338753966" target="_blank" rel="noopener" class="btn btn-whatsapp mt-lg">
+        <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm5.7 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-3.3-.7-2.8-1.1-4.6-3.9-4.7-4.1-.1-.2-1.1-1.5-1.1-2.8 0-1.3.7-2 1-2.2.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5.2.5.7 1.8.8 1.9.1.1.1.3 0 .5-.1.2-.1.3-.3.5l-.4.5c-.1.2-.3.3-.1.6.2.3.9 1.4 1.9 2.3 1.3 1.1 2.3 1.5 2.7 1.6.2.1.4.1.5-.1.2-.2.7-.8.9-1.1.2-.3.4-.2.6-.1.2.1 1.5.7 1.8.8.3.1.5.2.5.3.1.2.1.7-.1 1.3z"/></svg>
+        Message us on WhatsApp
+      </a>
+    </div>
+
+    <form id="contact-form">
+      <div class="field-row">
+        <div class="field"><label for="name">Name</label><input id="name" type="text" required></div>
+        <div class="field"><label for="email">Email</label><input id="email" type="email" required></div>
+      </div>
+      <div class="field-row">
+        <div class="field"><label for="company">Company</label><input id="company" type="text"></div>
+        <div class="field">
+          <label for="service">Service needed</label>
+          <select id="service">
+            <option>Business Website</option>
+            <option>E-Commerce Website</option>
+            <option>Landing Page</option>
+            <option>Portfolio Website</option>
+            <option>Website Redesign</option>
+            <option>App Development</option>
+            <option>Automation</option>
+            <option>Not sure yet</option>
+          </select>
+        </div>
+      </div>
+      <div class="field">
+        <label for="budget">Budget (₹)</label>
+        <input id="budget" type="text" placeholder="e.g. 15,000">
+        <p class="budget-note">Minimum project budget is ₹10,000 — final cost depends on the product or service you need.</p>
+      </div>
+      <div class="field"><label for="msg">Project details</label><textarea id="msg" required></textarea></div>
+      <button type="submit" class="btn btn-gold">Send via WhatsApp</button>
+      <p id="form-success-note"></p>
+      <p class="form-note">By submitting, you agree to be contacted about your project. We don't share your info with anyone else.</p>
+    </form>
+  </div>
+
+  <div class="map-strip reveal">
+    <div>
+      <div class="label">Studio location</div>
+      <h3>Chennai, Tamil Nadu, India — remote-first, available worldwide</h3>
+    </div>
+    <a href="mailto:truesynk001@gmail.com" class="btn btn-outline">Email us directly</a>
+  </div>
+</section>
+
+<section>
+  <div class="section-head reveal">
+    <div class="eyebrow-line"><span class="eyebrow">Before you reach out</span></div>
+    <h2>Common questions.</h2>
+  </div>
+  <div class="reveal">
+    <div class="faq-item">
+      <h4>How fast can you start?</h4>
+      <p>Work begins within 3 days after the advance amount is credited to TrueSynk.</p>
+    </div>
+    <div class="faq-item">
+      <h4>Do you work with international clients?</h4>
+      <p>Yes — TrueSynk is remote-first and works across time zones regularly.</p>
+    </div>
+    <div class="faq-item">
+      <h4>What's your typical project size?</h4>
+      <p>We take on everything from focused single-feature builds to full product launches — send details and we'll scope it honestly.</p>
+    </div>
+    <div class="faq-item">
+      <h4>Do you offer ongoing support after launch?</h4>
+      <p>Yes — every project includes up to 30 days of free post-launch support for bug fixes and minor changes.</p>
+    </div>
+    <div class="faq-item">
+      <h4>What's the minimum budget?</h4>
+      <p>Projects start from ₹10,000. The final cost depends on the specific product or service you need — see our <a href="services.html" class="gold-link">pricing packages</a> for a starting point.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <a href="home.html" class="logo"><img src="assets/logo-badge.png" alt="TrueSynk" class="logo-badge">TrueSynk</a>
+      <p>A freelance studio for founders who want one accountable team, not a patchwork of contractors.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Studio</h4>
+      <a href="services.html">Services</a>
+      <a href="team.html">Team</a>
+      <a href="projects.html">Projects</a>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <a href="mailto:truesynk001@gmail.com">truesynk001@gmail.com</a>
+      <a href="#" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="#" target="_blank" rel="noopener">Instagram</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 TrueSynk. All rights reserved.</span>
+    <span>Built in sync.</span>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

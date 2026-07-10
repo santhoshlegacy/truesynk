@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Meet the Team — TrueSynk</title>
+<link rel="icon" href="assets/favicon.png" type="image/png">
+<link rel="stylesheet" href="style.css">
+<style>
+  .team-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--hairline); border: 1px solid var(--hairline); }
+  .team-card { background: var(--ivory); padding: 40px 30px; }
+  .avatar { width: 60px; height: 60px; border-radius: 50%; background: var(--parchment); border: 1px solid var(--hairline); display: flex; align-items: center; justify-content: center; padding: 10px; margin-bottom: 24px; }
+  .avatar img { width: 100%; height: 100%; object-fit: contain; }
+  .team-card h3 { font-size: 1.1rem; font-weight: 500; margin-bottom: 3px; }
+  .team-card .role { font-family: 'IBM Plex Mono', monospace; font-size: 0.7rem; color: var(--gold-deep); letter-spacing: 0.04em; text-transform: uppercase; margin-bottom: 14px; }
+  .team-card p { font-size: 0.88rem; color: var(--grey-text); margin-bottom: 16px; }
+  .team-card .skills { display: flex; gap: 8px; flex-wrap: wrap; }
+  .skill-tag { font-family: 'IBM Plex Mono', monospace; font-size: 0.66rem; color: var(--gold-deep); border: 1px solid var(--hairline); padding: 4px 9px; border-radius: 12px; }
+  @media (max-width: 900px) { .team-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 560px) { .team-grid { grid-template-columns: 1fr; } }
+
+  .culture-strip { display: grid; grid-template-columns: repeat(3, 1fr); gap: 44px; margin-top: 56px; }
+  .culture-item .num { font-family: 'Fraunces', serif; font-style: italic; color: var(--gold-deep); font-size: 1.3rem; margin-bottom: 14px; display: block; }
+  .culture-item h3 { font-size: 1.1rem; margin-bottom: 8px; font-weight: 500; }
+  .culture-item p { font-size: 0.9rem; color: var(--grey-text); }
+  @media (max-width: 800px) { .culture-strip { grid-template-columns: 1fr; gap: 36px; } }
+
+  .cta { background: var(--parchment); text-align: center; padding: 120px 32px; }
+  .cta-inner { max-width: 620px; margin: 0 auto; }
+  .cta h2 { font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 20px; }
+  .cta p { color: var(--grey-text); margin-bottom: 36px; }
+  .cta-sync { max-width: 200px; margin: 0 auto 32px; }
+</style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <a href="home.html" class="logo"><img src="assets/logo-badge.png" alt="TrueSynk" class="logo-badge">TrueSynk</a>
+    <button class="mobile-toggle" aria-expanded="false">MENU</button>
+    <div class="nav-links">
+      <a href="home.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="projects.html">Projects</a>
+      <a href="clients.html">Clients</a>
+      <a href="team.html" class="active">Team</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <a href="contact.html" class="btn desktop-cta">Start a project</a>
+  </nav>
+</header>
+
+<section class="hero-v2">
+  <div class="hero-accent-bar"></div>
+  <div class="stagger">
+    <span class="eyebrow-badge"><span class="eyebrow">Meet the Team</span></span>
+    <h1>The people <span class="highlight">behind the work.</span></h1>
+    <p class="page-hero-sub">Six people, one accountable team — everyone here works directly on the projects you hire us for.</p>
+  </div>
+</section>
+
+<section class="section-flush">
+  <div class="team-grid reveal">
+    <div class="team-card">
+      <div class="avatar"><img src="assets/logo-badge.png" alt="TrueSynk"></div>
+      <h3>Santhosh (Simon)</h3>
+      <div class="role">Senior Developer</div>
+      <p>Full-stack development and project delivery across TrueSynk engagements.</p>
+      <div class="skills"><span class="skill-tag">Web Dev</span><span class="skill-tag">AI</span></div>
+    </div>
+    <div class="team-card">
+      <div class="avatar"><img src="assets/logo-badge.png" alt="TrueSynk"></div>
+      <h3>Team member</h3>
+      <div class="role">Senior Developer</div>
+      <p>Short bio on what they own and are known for.</p>
+      <div class="skills"><span class="skill-tag">Skill</span><span class="skill-tag">Skill</span></div>
+    </div>
+    <div class="team-card">
+      <div class="avatar"><img src="assets/logo-badge.png" alt="TrueSynk"></div>
+      <h3>Team member</h3>
+      <div class="role">Senior Developer</div>
+      <p>Short bio on what they own and are known for.</p>
+      <div class="skills"><span class="skill-tag">Skill</span><span class="skill-tag">Skill</span></div>
+    </div>
+    <div class="team-card">
+      <div class="avatar"><img src="assets/logo-badge.png" alt="TrueSynk"></div>
+      <h3>Team member</h3>
+      <div class="role">Senior Developer</div>
+      <p>Short bio on what they own and are known for.</p>
+      <div class="skills"><span class="skill-tag">Skill</span><span class="skill-tag">Skill</span></div>
+    </div>
+    <div class="team-card">
+      <div class="avatar"><img src="assets/logo-badge.png" alt="TrueSynk"></div>
+      <h3>Team member</h3>
+      <div class="role">Senior Developer</div>
+      <p>Short bio on what they own and are known for.</p>
+      <div class="skills"><span class="skill-tag">Skill</span><span class="skill-tag">Skill</span></div>
+    </div>
+    <div class="team-card">
+      <div class="avatar"><img src="assets/logo-badge.png" alt="TrueSynk"></div>
+      <h3>Team member</h3>
+      <div class="role">Senior Developer</div>
+      <p>Short bio on what they own and are known for.</p>
+      <div class="skills"><span class="skill-tag">Skill</span><span class="skill-tag">Skill</span></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="section-head reveal">
+    <div class="eyebrow-line"><span class="eyebrow">How we work together</span></div>
+    <h2>Small team, real accountability.</h2>
+  </div>
+  <div class="culture-strip reveal">
+    <div class="culture-item"><span class="num">I.</span><h3>Direct access</h3><p>You talk to the people doing the work, not account managers.</p></div>
+    <div class="culture-item"><span class="num">II.</span><h3>Shared standards</h3><p>Every specialist works from the same process and quality bar.</p></div>
+    <div class="culture-item"><span class="num">III.</span><h3>Room to grow</h3><p>We bring in the right specialist per project, so the team scales with what you need.</p></div>
+  </div>
+</section>
+
+<section class="cta" id="contact">
+  <div class="cta-inner">
+    <div class="sync-line cta-sync"><span class="node"></span><div class="track"></div><span class="node"></span></div>
+    <h2>Want to work with us?</h2>
+    <p>Tell us what you're building and we'll get back to you within a day.</p>
+    <a href="contact.html" class="btn">Get in touch</a>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <a href="home.html" class="logo"><img src="assets/logo-badge.png" alt="TrueSynk" class="logo-badge">TrueSynk</a>
+      <p>A freelance studio for founders who want one accountable team, not a patchwork of contractors.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Studio</h4>
+      <a href="services.html">Services</a>
+      <a href="team.html">Team</a>
+      <a href="projects.html">Projects</a>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <a href="mailto:truesynk001@gmail.com">truesynk001@gmail.com</a>
+      <a href="#" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="#" target="_blank" rel="noopener">Instagram</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 TrueSynk. All rights reserved.</span>
+    <span>Built in sync.</span>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

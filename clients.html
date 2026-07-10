@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Clients & Testimonials — TrueSynk</title>
+<link rel="icon" href="assets/favicon.png" type="image/png">
+<link rel="stylesheet" href="style.css">
+<style>
+  .logo-strip { display: grid; grid-template-columns: repeat(2, 1fr); border-top: 1px solid var(--hairline); border-left: 1px solid var(--hairline); max-width: 620px; }
+  .logo-cell {
+    border-right: 1px solid var(--hairline); border-bottom: 1px solid var(--hairline);
+    padding: 30px; display: flex; align-items: center; justify-content: center;
+    font-family: 'Fraunces', serif; font-size: 1.3rem; color: var(--ink); height: 110px;
+    transition: background 0.35s var(--ease-premium), transform 0.35s var(--ease-premium);
+  }
+  .logo-cell:hover { background: var(--parchment); transform: translateY(-2px); }
+  @media (max-width: 560px) { .logo-strip { grid-template-columns: 1fr; } }
+
+  .testimonial-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: var(--hairline); border: 1px solid var(--hairline); }
+  .testimonial-card { background: var(--ivory); padding: 40px 36px; }
+  .testimonial-card .quote-mark { font-family: 'Fraunces', serif; font-size: 2.6rem; color: var(--gold-light); line-height: 1; margin-bottom: 8px; }
+  .testimonial-card p.quote { font-size: 1.02rem; color: var(--ink); margin-bottom: 24px; max-width: 46ch; }
+  .testimonial-card .who { display: flex; align-items: center; gap: 12px; }
+  .who .avatar-sm {
+    width: 40px; height: 40px; border-radius: 50%; background: var(--parchment);
+    border: 1px solid var(--hairline); display: flex; align-items: center; justify-content: center;
+    font-family: 'Fraunces', serif; color: var(--gold-deep); font-size: 1rem;
+  }
+  .who .name { font-weight: 600; font-size: 0.92rem; }
+  .who .title { font-size: 0.8rem; color: var(--grey-text); }
+  .stars { font-family: 'IBM Plex Mono', monospace; color: var(--gold); font-size: 0.85rem; margin-top: 4px; }
+  @media (max-width: 800px) { .testimonial-grid { grid-template-columns: 1fr; } }
+
+  .cta { background: var(--parchment); text-align: center; padding: 120px 32px; }
+  .cta-inner { max-width: 620px; margin: 0 auto; }
+  .cta h2 { font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 20px; }
+  .cta p { color: var(--grey-text); margin-bottom: 36px; }
+  .cta-sync { max-width: 200px; margin: 0 auto 32px; }
+</style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <a href="home.html" class="logo"><img src="assets/logo-badge.png" alt="TrueSynk" class="logo-badge">TrueSynk</a>
+    <button class="mobile-toggle" aria-expanded="false">MENU</button>
+    <div class="nav-links">
+      <a href="home.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="projects.html">Projects</a>
+      <a href="clients.html" class="active">Clients</a>
+      <a href="team.html">Team</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <a href="contact.html" class="btn desktop-cta">Start a project</a>
+  </nav>
+</header>
+
+<section class="hero-v2">
+  <div class="hero-accent-bar"></div>
+  <div class="stagger">
+    <span class="eyebrow-badge"><span class="eyebrow">Clients & Reviews</span></span>
+    <h1>Trusted by teams <span class="highlight">who needed it right.</span></h1>
+    <p class="page-hero-sub">The businesses we've worked with, and what they said after we shipped.</p>
+  </div>
+</section>
+
+<section class="section-flush">
+  <div class="section-head reveal">
+    <div class="eyebrow-line"><span class="eyebrow">Clients</span></div>
+    <h2>Businesses we've worked with.</h2>
+  </div>
+  <div class="logo-strip reveal">
+    <div class="logo-cell">Jawa</div>
+    <div class="logo-cell">Wukong</div>
+  </div>
+</section>
+
+<section>
+  <div class="section-head reveal">
+    <div class="eyebrow-line"><span class="eyebrow">Testimonials</span></div>
+    <h2>What clients say after launch.</h2>
+  </div>
+  <div class="testimonial-grid reveal">
+    <div class="testimonial-card">
+      <div class="quote-mark">"</div>
+      <p class="quote">Placeholder quote — replace with what the client actually said about working with TrueSynk and the result.</p>
+      <div class="stars">★★★★★</div>
+      <div class="who mt-sm">
+        <div class="avatar-sm">C</div>
+        <div><div class="name">Client name</div><div class="title">Role, Company</div></div>
+      </div>
+    </div>
+    <div class="testimonial-card">
+      <div class="quote-mark">"</div>
+      <p class="quote">Placeholder quote — replace with what the client actually said about working with TrueSynk and the result.</p>
+      <div class="stars">★★★★★</div>
+      <div class="who mt-sm">
+        <div class="avatar-sm">C</div>
+        <div><div class="name">Client name</div><div class="title">Role, Company</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta" id="contact">
+  <div class="cta-inner">
+    <div class="sync-line cta-sync"><span class="node"></span><div class="track"></div><span class="node"></span></div>
+    <h2>Like what you see?</h2>
+    <p>Get in touch and tell us what you're building — we'll reply within one business day.</p>
+    <a href="contact.html" class="btn">Contact us</a>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <a href="home.html" class="logo"><img src="assets/logo-badge.png" alt="TrueSynk" class="logo-badge">TrueSynk</a>
+      <p>A freelance studio for founders who want one accountable team, not a patchwork of contractors.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Studio</h4>
+      <a href="services.html">Services</a>
+      <a href="team.html">Team</a>
+      <a href="projects.html">Projects</a>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <a href="mailto:truesynk001@gmail.com">truesynk001@gmail.com</a>
+      <a href="#" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="#" target="_blank" rel="noopener">Instagram</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 TrueSynk. All rights reserved.</span>
+    <span>Built in sync.</span>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
