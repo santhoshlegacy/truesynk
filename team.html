@@ -30,6 +30,35 @@
   .cta h2 { font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 20px; }
   .cta p { color: var(--grey-text); margin-bottom: 36px; }
   .cta-sync { max-width: 200px; margin: 0 auto 32px; }
+
+  /* Perfect Circle Team Avatar */
+  /* 1. The Fixed Circular Frame */
+  .team-avatar-frame {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    overflow: hidden; /* Clips passport borders out of view */
+    border: 1px solid var(--hairline);
+    margin-bottom: 16px;
+    position: relative; /* Keeps scaling isolated inside the circle */
+    flex-shrink: 0;
+  }
+
+  /* 2. The Scaled Image inside the Frame */
+  .team-avatar-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center; /* Keeps focus on hair and face */
+
+    /* Static scale to cut out passport side borders without breaking the grid */
+    transform: scale(1.15) !important; 
+    transform-origin: top center;
+
+    /* Kill any animations/transitions */
+    transition: none !important;
+    animation: none !important;
+  }
 </style>
 </head>
 <body>
@@ -61,48 +90,73 @@
 
 <section class="section-flush">
   <div class="team-grid reveal">
+    
+    <!-- CARD 1: SANTHOSH -->
     <div class="team-card">
-      <div class="avatar"></div>
+      <div class="team-avatar-frame">
+        <img src="assets/santhosh.jpg" alt="Santhosh" class="team-avatar-img">
+      </div>
       <h3>Santhosh</h3>
       <div class="role">Senior Developer</div>
-      <p>Full-stack development and project delivery across TrueSynk engagements.</p>
+      <p>Turning complex architecture blueprints into seamless, high-performance applications. If it needs to scale, handle heavy data workflows, or run 24/7 without breaking, Santhosh builds it.</p>
       <div class="skills"><span class="skill-tag">Web Dev</span><span class="skill-tag">AI</span></div>
     </div>
+
+    <!-- CARD 2: LEVAANA -->
     <div class="team-card">
-      <div class="avatar"></div>
+      <div class="team-avatar-frame">
+        <img src="assets/levaana.jpg" alt="Levaana" class="team-avatar-img">
+      </div>
       <h3>Levaana</h3>
       <div class="role">Developer</div>
-      <p>Full-stack developer and project delivery across TrueSynk engagements</p>
+      <p>Bridging the gap between beautiful layouts and robust logic. Levaana crafts smooth front-end user interfaces and links them tightly to powerful back-end databases across both web and mobile apps</p>
       <div class="skills"><span class="skill-tag">Web Dev</span><span class="skill-tag">App</span></div>
     </div>
+
+    <!-- CARD 3: AHIL VARSHAN -->
     <div class="team-card">
-      <div class="avatar"></div>
+      <div class="team-avatar-frame">
+        <img src="assets/ahil.jpg" alt="Ahil varshan" class="team-avatar-img">
+      </div>
       <h3>Ahil varshan</h3>
       <div class="role">social media manager</div>
-      <p>Responsible for managing the company's social media presence and creating engaging content.</p>
+      <p>Translating technical expertise into stories that grab attention. Ahil builds brand digital authority, turning TrueSynk’s complex case studies into engaging content that drives high-intent client leads.</p>
       <div class="skills"><span class="skill-tag">Social Media</span><span class="skill-tag">Content Creation</span></div>
     </div>
+
+    <!-- CARD 4: HEMANTH SRINIVASAN -->
     <div class="team-card">
-      <div class="avatar"></div>
+      <div class="team-avatar-frame">
+        <img src="assets/hemanth.jpg" alt="Hemanth Srinivasan" class="team-avatar-img">
+      </div>
       <h3>Hemanth Srinivasan</h3>
       <div class="role">sales person</div>
-      <p>Responsible for driving sales and building relationships with potential clients.</p>
+      <p>"De-risking the onboarding process for founders. Hemanth deep-dives into your project goals, breaks down technical timelines, and maps out strategic delivery pathways before a single line of code is written.</p>
       <div class="skills"><span class="skill-tag">Sales</span><span class="skill-tag">Relationship Management</span></div>
     </div>
+
+    <!-- CARD 5: SUNDAR RAJAN -->
     <div class="team-card">
-      <div class="avatar"></div>
+      <div class="team-avatar-frame">
+        <img src="assets/sundar.jpg" alt="Sundar Rajan" class="team-avatar-img">
+      </div>
       <h3>Sundar Rajan</h3>
       <div class="role">sales person</div>
-      <p>Responsible for driving sales and building relationships with potential clients.</p>
+      <p>Connecting ambitious founders with the exact technical execution they need. Sundar coordinates client relationships, ensuring project specifications line up perfectly with team delivery.</p>
       <div class="skills"><span class="skill-tag">Sales</span><span class="skill-tag">Relationship Management</span></div>
     </div>
+
+    <!-- CARD 6: YASWANTH -->
     <div class="team-card">
-      <div class="avatar"></div>
+      <div class="team-avatar-frame">
+        <img src="assets/yaswanth.jpg" alt="Yaswanth" class="team-avatar-img">
+      </div>
       <h3>Yaswanth</h3>
       <div class="role">designer</div>
-      <p>Responsible for creating visual designs and user experiences for our clients.</p>
+      <p>Kicking out rigid templates to design custom digital identities that feel established. Yaswanth builds minimal, high-end interfaces engineered to intentionally turn standard traffic into paying customers.</p>
       <div class="skills"><span class="skill-tag">creative thinking</span><span class="skill-tag">design</span></div>
     </div>
+
   </div>
 </section>
 
@@ -130,7 +184,7 @@
 <footer>
   <div class="footer-top">
     <div class="footer-brand">
-      <a href="home.html" class="logo"><img src="assets/logo-badge.png" alt="TrueSynk" class="logo-badge">TrueSynk</a>
+      <a href="index.html" class="logo"><img src="assets/logo-badge.png" alt="TrueSynk" class="logo-badge">TrueSynk</a>
       <p>A freelance studio for founders who want one accountable team, not a patchwork of contractors.</p>
     </div>
     <div class="footer-col">
@@ -140,9 +194,9 @@
       <a href="projects.html">Projects</a>
     </div>
     <div class="footer-col">
-  <h4>Contact</h4>
-  <a href="https://mail.google.com/mail/?view=cm&fs=1&to=truesynk001@gmail.com" target="_blank" rel="noopener">truesynk001@gmail.com</a>
-  <a href="https://www.instagram.com/true_synk/" target="_blank" rel="noopener">Instagram</a>
+      <h4>Contact</h4>
+      <a href="https://mail.google.com/mail/?view=cm&fs=1&to=truesynk001@gmail.com" target="_blank" rel="noopener">truesynk001@gmail.com</a>
+      <a href="https://www.instagram.com/true_synk/" target="_blank" rel="noopener">Instagram</a>
     </div>
   </div>
   <div class="footer-bottom">
