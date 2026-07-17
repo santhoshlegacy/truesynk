@@ -1,32 +1,54 @@
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap');
 
 :root {
-  --ivory: #FAF8F3;
-  --ink: #14130F;
-  --charcoal: #211F1A;
-  --obsidian: #0E0D0A;          /* deep near-black for premium dark sections */
-  --gold: #B0813F;              /* brass — primary accent */
-  --gold-deep: #7C5B27;         /* bronze — hover/pressed */
-  --gold-light: #D8B784;        /* light gold tint */
-  --gold-bright: #E8C888;       /* highlight edge for foil sweep */
-  --parchment: #F1E9DA;
-  --hairline: #DED6C4;
-  --hairline-dark: #3A362C;     /* hairline for dark sections */
-  --grey-text: #5B5850;
-  --grey-text-light: #C7C3B8;   /* body text on dark sections */
+  /* ===== FULL BOTTLE GREEN THEME (Inverted for Dark Mode) ===== */
+  
+  /* Background Canvas Colors (Bottle Greens) */
+  --ivory: #0F1B14;             /* Main Background: Deep Bottle Green */
+  --parchment: #17241A;         /* Cards & Elements: Elevated Mid-Tone Green */
+  --obsidian: #0A120D;          /* Deepest Shadow Green for contrast sections */
+  
+  /* Text & Line Colors (Ivory & Sage) */
+  --ink: #FDFBF7;               /* Main Text: Crisp Luxury Ivory */
+  --grey-text: #96A39A;         /* Secondary Text: Soft sage-grey */
+  --grey-text-light: #B4C0B8;   
+  
+  /* Borders */
+  --hairline: #2A3B2F;          /* Subtle dark green borders */
+  --hairline-dark: #1E2E22;     
+  
+  /* Metallic Accents (Antique Gold) */
+  --gold: #A8863F;              /* Primary Gold */
+  --gold-deep: #C5A86B;         /* Champagne Gold (Lightened for dark backgrounds) */
+  --gold-light: #DBC28F;        
+  --gold-bright: #F4E2BB;       
 
-  --ease-premium: cubic-bezier(0.22, 1, 0.36, 1);
+  /* Premium Motion Engine */
+  --ease-premium: cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 
+/* ===== ADVANCED LUXURY TEXTURE LAYER ===== */
 body {
   background: var(--ivory);
   color: var(--ink);
   font-family: 'Inter', sans-serif;
   line-height: 1.6;
   overflow-x: hidden;
+  position: relative;
+}
+
+/* Soft, near-invisible tactile texture across the site */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0; width: 100vw; height: 100vh;
+  opacity: 0.035; /* Slightly increased grain for dark backgrounds */
+  pointer-events: none;
+  z-index: 9999;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
 }
 
 h1, h2, h3 { font-family: 'Fraunces', serif; font-weight: 500; letter-spacing: -0.01em; }
@@ -65,7 +87,7 @@ img, svg { display: block; max-width: 100%; }
   animation: pulse-travel 3.2s ease-in-out infinite;
 }
 @keyframes pulse-travel { 0% { left: -30%; } 50% { left: 100%; } 100% { left: 100%; } }
-.node { width: 6px; height: 6px; border-radius: 50%; background: var(--gold); flex-shrink: 0; box-shadow: 0 0 8px 1px rgba(176, 129, 63, 0.45); }
+.node { width: 6px; height: 6px; border-radius: 50%; background: var(--gold); flex-shrink: 0; box-shadow: 0 0 8px 1px rgba(168, 134, 63, 0.45); }
 
 /* Persistent gold thread along the edge of dark sections */
 .gold-thread {
@@ -85,13 +107,13 @@ img, svg { display: block; max-width: 100%; }
 /* ===== NAV ===== */
 header {
   position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-  background: rgba(250, 248, 243, 0.88);
+  background: rgba(15, 27, 20, 0.88); /* Deep bottle green blur */
   -webkit-backdrop-filter: blur(12px);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--hairline);
   transition: box-shadow 0.4s var(--ease-premium);
 }
-header.scrolled { box-shadow: 0 8px 24px -12px rgba(20, 19, 15, 0.15); }
+header.scrolled { box-shadow: 0 8px 24px -12px rgba(0, 0, 0, 0.5); }
 
 nav {
   max-width: 1180px; margin: 0 auto; padding: 16px 32px;
@@ -103,7 +125,7 @@ nav {
 }
 .logo-badge {
   width: 38px; height: 38px; border-radius: 9px; object-fit: cover;
-  box-shadow: 0 2px 10px -2px rgba(20, 19, 15, 0.35);
+  box-shadow: 0 2px 10px -2px rgba(0, 0, 0, 0.5);
   transition: transform 0.4s var(--ease-premium);
 }
 .logo:hover .logo-badge { transform: rotate(-4deg) scale(1.05); }
@@ -119,7 +141,7 @@ nav {
 }
 .nav-links a:focus-visible, .btn:focus-visible, a:focus-visible { outline: 2px solid var(--gold-deep); outline-offset: 3px; }
 
-/* ===== BUTTONS with gold sheen sweep ===== */
+/* ===== BUTTONS ===== */
 .btn {
   position: relative; overflow: hidden;
   font-family: 'IBM Plex Mono', monospace; font-size: 0.78rem; letter-spacing: 0.04em;
@@ -129,11 +151,11 @@ nav {
 }
 .btn::before {
   content: ''; position: absolute; top: 0; left: -120%; width: 60%; height: 100%;
-  background: linear-gradient(115deg, transparent, rgba(232, 200, 136, 0.35), transparent);
+  background: linear-gradient(115deg, transparent, rgba(197, 168, 107, 0.35), transparent);
   transition: left 0.6s var(--ease-premium);
 }
 .btn:hover::before { left: 130%; }
-.btn:hover { background: transparent; color: var(--ink); transform: translateY(-1px); box-shadow: 0 6px 16px -6px rgba(20,19,15,0.3); }
+.btn:hover { background: transparent; color: var(--ink); transform: translateY(-1px); box-shadow: 0 6px 16px -6px rgba(0, 0, 0, 0.4); }
 .btn-outline { background: transparent; color: var(--ink); border: 1px solid var(--ink); }
 .btn-outline:hover { background: var(--ink); color: var(--ivory); }
 .btn-gold { background: var(--gold); border-color: var(--gold); color: var(--ivory); }
@@ -186,7 +208,7 @@ section { padding: 100px 32px; max-width: 1180px; margin: 0 auto; }
 }
 .service-card:hover, .team-card:hover, .work-card:hover, .testimonial-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 16px 32px -20px rgba(20, 19, 15, 0.35);
+  box-shadow: 0 16px 32px -20px rgba(0, 0, 0, 0.45);
   position: relative;
   z-index: 2;
 }
@@ -235,11 +257,10 @@ footer { padding: 56px 32px 40px; max-width: 1180px; margin: 0 auto; }
 .link-underline { text-decoration: underline; }
 
 /* =========================================================
-   V2 ADDITIONS — new hero system, services/pricing/terms/process,
-   feature icons, WhatsApp CTA
+   V2 ADDITIONS
    ========================================================= */
 
-/* ===== HIGHLIGHT (replaces italic foil on hero headlines) ===== */
+/* ===== HIGHLIGHT ===== */
 .highlight {
   font-style: normal;
   position: relative;
@@ -252,7 +273,7 @@ footer { padding: 56px 32px 40px; max-width: 1180px; margin: 0 auto; }
   animation: foil-shift 7s ease-in-out infinite;
 }
 
-/* ===== HERO V2 (used on every page) ===== */
+/* ===== HERO V2 ===== */
 .hero-v2 {
   position: relative;
   padding-top: 168px;
@@ -286,7 +307,7 @@ footer { padding: 56px 32px 40px; max-width: 1180px; margin: 0 auto; }
 .hero-v2 .page-hero-sub { padding-left: 20px; margin-top: 22px; }
 .hero-v2 .hero-cta { padding-left: 20px; margin-top: 36px; display: flex; gap: 16px; flex-wrap: wrap; }
 
-/* ===== FEATURE ICON ROW (Fast Turnaround / Modern & Responsive / Secure / Support) ===== */
+/* ===== FEATURE ICON ROW ===== */
 .feature-icons {
   margin-top: 76px;
   display: grid;
@@ -313,7 +334,7 @@ footer { padding: 56px 32px 40px; max-width: 1180px; margin: 0 auto; }
 .feature-icon-item p { font-size: 0.84rem; color: var(--grey-text); }
 @media (max-width: 800px) { .feature-icons { grid-template-columns: repeat(2, 1fr); } }
 
-/* ===== SERVICE LIST ROW (website creation services, brochure-style) ===== */
+/* ===== SERVICE LIST ROW ===== */
 .service-row {
   display: grid;
   grid-template-columns: 64px 1fr;
@@ -358,7 +379,7 @@ footer { padding: 56px 32px 40px; max-width: 1180px; margin: 0 auto; }
 .checklist-item svg { width: 18px; height: 18px; stroke: var(--gold-deep); flex-shrink: 0; margin-top: 1px; }
 @media (max-width: 700px) { .checklist-grid { grid-template-columns: 1fr; } }
 
-/* ===== PROCESS VERTICAL (6 steps) ===== */
+/* ===== PROCESS VERTICAL ===== */
 .process-vertical { position: relative; max-width: 640px; }
 .process-vertical::before {
   content: ''; position: absolute; left: 23px; top: 12px; bottom: 12px; width: 1px;
@@ -387,9 +408,9 @@ footer { padding: 56px 32px 40px; max-width: 1180px; margin: 0 auto; }
   transition: transform 0.4s var(--ease-premium), box-shadow 0.4s var(--ease-premium), border-color 0.4s;
   background: var(--ivory);
 }
-.pricing-card:hover { transform: translateY(-6px); box-shadow: 0 20px 40px -22px rgba(20,19,15,0.3); }
+.pricing-card:hover { transform: translateY(-6px); box-shadow: 0 20px 40px -22px rgba(0, 0, 0, 0.45); }
 .pricing-card.featured {
-  border-color: var(--gold); background: var(--obsidian); color: var(--ivory);
+  border-color: var(--gold); background: var(--obsidian); color: var(--ink);
   position: relative;
 }
 .pricing-card.featured .pricing-tag {
@@ -399,7 +420,7 @@ footer { padding: 56px 32px 40px; max-width: 1180px; margin: 0 auto; }
   padding: 5px 14px; border-radius: 12px; text-transform: uppercase; white-space: nowrap;
 }
 .pricing-card h3 { font-size: 1.2rem; margin-bottom: 6px; }
-.pricing-card.featured h3 { color: var(--ivory); }
+.pricing-card.featured h3 { color: var(--ink); }
 .pricing-card .desc { font-size: 0.85rem; color: var(--grey-text); margin-bottom: 20px; }
 .pricing-card.featured .desc { color: var(--grey-text-light); }
 .pricing-card .price {
@@ -432,7 +453,7 @@ footer { padding: 56px 32px 40px; max-width: 1180px; margin: 0 auto; }
 
 /* ===== WHATSAPP ===== */
 .btn-whatsapp {
-  background: #25D366; border-color: #25D366; color: #0E0D0A;
+  background: #25D366; border-color: #25D366; color: var(--ivory);
   display: inline-flex; align-items: center; gap: 8px;
 }
 .btn-whatsapp:hover { background: transparent; color: #25D366; border-color: #25D366; }
@@ -440,11 +461,11 @@ footer { padding: 56px 32px 40px; max-width: 1180px; margin: 0 auto; }
 
 .budget-note { font-size: 0.78rem; color: var(--grey-text); margin-top: -4px; }
 
-/* ===== SIMPLE 2-UP GRID (for reduced client/project counts) ===== */
+/* ===== SIMPLE 2-UP GRID ===== */
 .grid-2up { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
 @media (max-width: 700px) { .grid-2up { grid-template-columns: 1fr; } }
 
-/* ===== ADDITIONAL UTILITIES (replacing remaining inline styles) ===== */
+/* ===== ADDITIONAL UTILITIES ===== */
 .gold-link { color: var(--gold-deep); text-decoration: underline; }
 .mt-xl { margin-top: 60px; }
 
@@ -474,17 +495,17 @@ footer { padding: 56px 32px 40px; max-width: 1180px; margin: 0 auto; }
   color: var(--gold-deep);
   border-color: var(--gold-deep);
 }
+
 /* Client Avatar Logo */
 .avatar-img {
-  width: 48px; /* Matches standard avatar sizing */
+  width: 48px; 
   height: 48px;
-  border-radius: 50%; /* Makes it a perfect circle */
-  object-fit: cover; /* Prevents the logo from stretching or squishing */
+  border-radius: 50%; 
+  object-fit: cover; 
   border: 1px solid var(--hairline);
   flex-shrink: 0;
 }
 
-/* Ensure the .who container aligns the image and text properly */
 .who {
   display: flex;
   align-items: center;
